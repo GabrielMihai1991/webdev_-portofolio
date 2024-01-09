@@ -1,0 +1,28 @@
+<SCRIPT TYPE="text/javascript">
+<!--
+function Circle_calc(GeoForm)
+{
+var CircleRadius = GeoForm.Circle_radius.value;
+if (CircleRadius >= 0)
+ {
+ GeoForm.Circle_area.value = Math.PI * Math.pow(CircleRadius, 2) ;
+ }
+else
+ {
+ GeoForm.Circle_area.value = "";
+ }
+}
+
+</SCRIPT>
+<FORM>
+<TABLE BORDER CELLPADDING=1>
+<!-- raza cercului -->
+<TR>
+<TH>Circle parameters<BR><IMG SRC="../assets/images/aria_cercului_1.png" HEIGHT=88 WIDTH=88 ALT="poza unui cerc"></TH>
+<TD><NOBR>Radius: <INPUT NAME="Circle_radius" SIZE=4></NOBR></TD>
+<TD><INPUT TYPE=BUTTON OnClick="Circle_calc(this.form);" VALUE="Calculate"></TD>
+<TD ALIGN=RIGHT BGCOLOR="#AACCFF">
+ <NOBR>Area: <INPUT NAME="Circle_area" SIZE=9></NOBR></TD>
+</TR>
+</TABLE>
+</FORM>
